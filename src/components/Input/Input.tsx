@@ -87,7 +87,6 @@ function Input({
             onChange={
               onChange ? (event) => onChange(event.target.value) : undefined
             }
-            placeholder={placeholder}
             ref={inputRef}
             type={type}
             value={value}
@@ -97,8 +96,7 @@ function Input({
               (icon ? ' sbui-input--with-icon' : '')
             }
           />
-          {icon && <InputIconContainer icon={icon} />}
-          {error && <InputErrorIcon />}
+        <span className="placeholder">{placeholder}</span>
         </div>
       </FormLayout>
     </div>
